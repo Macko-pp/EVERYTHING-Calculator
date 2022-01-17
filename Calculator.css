@@ -1,0 +1,71 @@
+* {
+	background-color: #4CAF50;
+	color: #000000;
+}
+
+body {
+	font-family: "Rubik Mono One";
+    font-size: 20px;
+}
+
+strong#smol {
+	font-size: 10px;	
+}
+
+strong#key {
+	color: #000000;
+}
+
+p#key {
+	font-weight: bold;
+	margin-left: 40px;
+	font-family: "Fira Code";
+	font-size: medium;
+}
+
+.input {
+	background-color: #000000;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 8px;
+	border: none;
+	cursor: pointer;
+	width: 500px;
+	text-align: center;
+	border-radius: 3px;
+}
+
+#modifier {
+	font-family: "Rubik Mono One";
+	background-color: #000000;
+	color: white;
+	padding: 6px 20px;
+	margin: 8px 8px 8px 220px;
+	border: none;
+	cursor: pointer;
+	border-radius: 3px;
+}
+
+#equals {
+	margin: 0px 0px 0px 220px;
+}
+
+.btn {
+	font-family: "Rubik Mono One";
+	background-color: #000000;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 8px 8px 207px;
+	border: none;
+	cursor: pointer;
+	text-align: center;
+	border-radius: 3px;
+}
+
+.btn#calculate2 {
+	margin: 0px 0px 0px 170px;
+}
+
+.hoverChange:hover {
+	background-color: #303030;
+}

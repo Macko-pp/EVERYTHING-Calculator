@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>HTML Calculator</title>
+        <meta charset="UTF-8">
+        <meta name="Calculator.html" content="A calculator I made to test myself in TS, CSS, and HTML">
+        <script src="Calculator.ts"></script>
+        <link rel="stylesheet" type="text/css" href="Calculator.css">
+    </head>
+    
+    <body>
+        <h1>Calculator</h1>
+        <h3>Made by: Max Konietzko<strong id="smol"> (and Tomas Mendoza)</strong></h3>
+        
+        <strong id="key">Key:</strong>
+        <p id="key">
+            + = Addition<br>
+            x = Multiplication<br>
+            - = Subtraction<br>
+            ÷ (U+00F7) = Division<br>
+            ^ = Exponent<br>
+            % (U+0025) = Percentage<br>
+            √ = Sqr Root<br>
+            △ (U+25B3) = Triangle Area<br>
+            ◬ (U+25EC) = Triangular Prism Volume<br>
+            ❑ (U+2751) = Rectangular Prism Volume<br>
+            ⊿ (U+22BF) = Pythagorean Theorem<br> 
+            Mi-Km = Miles to Kilometers<br>
+            Km-Mi = Kilometers to Miles<br>
+            Ft-M = Feet to Meters<br>
+            M-Ft = Meters to Feet<br>
+            Cm-In = Centimeters to Inches<br>
+            In-Cm = Inches to Centimeters<br>
+            °F-°C = Farenheit to Celsius<br>
+            °C-°F = Celsius to Farenheit<br>
+            Kg-Lb = Kilograms to Pounds<br>
+            Lb-Kg = Pounds to Kilograms<br>
+        
+        </p>
+        <input type="number" step="any" id="var1" value="1" class="input hoverChange">
+        <br>
+        <!-- <input type="text" id="modifier" value="+" class="input"> -->
+
+        <select id="modifier" class="hoverChange">
+            <option value="+">+</option>
+            <option value="x">x</option>
+            <option value="-">-</option>
+            <option value="/">/</option>
+            <option value="^">^</option>
+            <option value="%">%</option>
+            <option value="√">√</option>
+            <option value="△">△</option>
+            <option value="◬">◬</option>
+            <option value="❑">❑</option>
+            <option value="⊿">⊿</option>
+            <option value="Mi-Km">Mi-Km</option>
+            <option value="Km-Mi">Km-Mi</option>
+            <option value="Ft-M">Ft-M</option>
+            <option value="M-Ft">M-Ft</option>
+            <option value="Cm-In">Cm-In</option>
+            <option value="In-Cm">In-Cm</option>
+            <option value="F°-C°">F-C</option>
+            <option value="C°-F°">C-F</option>
+            <option value="Kg-Lb">Kg-Lb</option>
+            <option value="Lb-Kg">Lb-Kg</option>
+
+        </select>
+        
+        <strong id="equals"> = <strong id="result"> </strong></strong>
+
+        <br>
+        <input type="number" step="any" id="var2" value="1" class="input hoverChange">
+        <br>
+        <div id="var3Place"></div>
+
+        <div id="button2Place">
+        </div>
+
+        <div id="button1Place">
+            <button onclick="display()" id="calculate" class="btn hoverChange">Calculate</button>
+        </div>
+
+        <script>
+            function display2() {
+                var var1 = document.getElementById("var1").value;
+                var modifier = document.getElementById("modifier").value;
+                var var2 = document.getElementById("var2").value;
+                var var3 = document.getElementById("var3").value;
+                document.getElementById("var3Place").innerHTML = "";
+                document.getElementById("button2Place").innerHTML = "";
+                document.getElementById("button1Place").innerHTML = '<button onclick="display()" id="calculate" class="btn hoverChange">Calculate</button>';
+                document.getElementById("result").innerHTML = calc(var1, modifier, var2, var3);
+            }
+
+            function display() {
+                var var1 = document.getElementById("var1").value;
+                var modifier = document.getElementById("modifier").value;
+                var var2 = document.getElementById("var2").value;
+                
+                // if either var is a decimal, convert it to a float. Else, convert it to an int.
+                if (var1.includes(".")) {
+                    var1 = parseFloat(var1);
+                } else {
+                    var1 = parseInt(var1);
+                }
+                
+                if (var2.includes(".")) {
+                    var2 = parseFloat(var2);
+                } else {
+                    var2 = parseInt(var2);
+                }
+                
+
+                if (modifier === "◬" || modifier === "❑") {
+                    // replace id var3Place with the input for the third variable
+                    document.getElementById("var3Place").innerHTML = "<input type='number' step='any' id='var3' value='0' class='input hoverChange'>";
+
+                    document.getElementById("button2Place").innerHTML = '<button onclick="display2()" id="calculate2" class="btn hoverChange">Calculate Volume</button>';
+
+                    document.getElementById("button1Place").innerHTML = ''
+
+                } else {
+                    // replace id var3Place with nothing
+                    document.getElementById("var3Place").innerHTML = "";
+                    document.getElementById("button2Place").innerHTML = "";
+                    document.getElementById("button1Place").innerHTML = '<button onclick="display()" id="calculate" class="btn hoverChange">Calculate</button>';
+                    document.getElementById("result").innerHTML = calc(var1, modifier, var2);
+                }
+            }
+        </script>
+
+    </body>
+</html>
