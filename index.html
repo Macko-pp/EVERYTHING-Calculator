@@ -7,79 +7,98 @@
         <meta name="Calculator.html" content="A calculator I made to test myself in TS, CSS, and HTML">
         <script src="Calculator.ts"></script>
         <link rel="stylesheet" type="text/css" href="Calculator.css">
+        <link rel=“shortcut icon” href="/favicon.ico" type=“image/x-icon”>
+        <link rel=“icon” href="/favicon.ico" type=“image/x-icon”>
     </head>
     
     <body>
-        <h1>Calculator</h1>
-        <h3>Made by: Max Konietzko<strong id="smol"> (and Tomas Mendoza)</strong></h3>
-        
-        <strong id="key">Key:</strong>
-        <p id="key">
-            + = Addition<br>
-            x = Multiplication<br>
-            - = Subtraction<br>
-            ÷ (U+00F7) = Division<br>
-            ^ = Exponent<br>
-            % (U+0025) = Percentage<br>
-            √ = Sqr Root<br>
-            △ (U+25B3) = Triangle Area<br>
-            ◬ (U+25EC) = Triangular Prism Volume<br>
-            ❑ (U+2751) = Rectangular Prism Volume<br>
-            ⊿ (U+22BF) = Pythagorean Theorem<br> 
-            Mi-Km = Miles to Kilometers<br>
-            Km-Mi = Kilometers to Miles<br>
-            Ft-M = Feet to Meters<br>
-            M-Ft = Meters to Feet<br>
-            Cm-In = Centimeters to Inches<br>
-            In-Cm = Inches to Centimeters<br>
-            °F-°C = Farenheit to Celsius<br>
-            °C-°F = Celsius to Farenheit<br>
-            Kg-Lb = Kilograms to Pounds<br>
-            Lb-Kg = Pounds to Kilograms<br>
-        
-        </p>
-        <input type="number" step="any" id="var1" value="1" class="input hoverChange">
-        <br>
-        <!-- <input type="text" id="modifier" value="+" class="input"> -->
+        <div class="row">
+            <div class="colomn">
+                <h1>Calculator</h1>
+                <h3>Made by: Max Konietzko<strong id="smol"> (and Tomas Mendoza)</strong></h3>
+                
+                <strong id="key">Key:</strong>
+                <p id="key">
+                    + = Addition<br>
+                    x = Multiplication<br>
+                    - = Subtraction<br>
+                    ÷ (U+00F7) = Division<br>
+                    ^ = Exponent<br>
+                    % (U+0025) = Percentage<br>
+                    √ = Sqr Root<br>
+                    △ (U+25B3) = Triangle Area<br>
+                    ◬ (U+25EC) = Triangular Prism Volume<br>
+                    ❑ (U+2751) = Rectangular Prism Volume<br>
+                    ⊿ (U+22BF) = Pythagorean Theorem<br> 
+                    Mi-Km = Miles to Kilometers<br>
+                    Km-Mi = Kilometers to Miles<br>
+                    Ft-M = Feet to Meters<br>
+                    M-Ft = Meters to Feet<br>
+                    Cm-In = Centimeters to Inches<br>
+                    In-Cm = Inches to Centimeters<br>
+                    °F-°C = Farenheit to Celsius<br>
+                    °C-°F = Celsius to Farenheit<br>
+                    Kg-Lb = Kilograms to Pounds<br>
+                    Lb-Kg = Pounds to Kilograms<br>
+                
+                </p>
+            </div>
+            <div class="column">
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <input type="number" step="any" id="var1" value="1" class="input hoverChange">
+                <br>
+                <!-- <input type="text" id="modifier" value="+" class="input"> -->
 
-        <select id="modifier" class="hoverChange">
-            <option value="+">+</option>
-            <option value="x">x</option>
-            <option value="-">-</option>
-            <option value="/">/</option>
-            <option value="^">^</option>
-            <option value="%">%</option>
-            <option value="√">√</option>
-            <option value="△">△</option>
-            <option value="◬">◬</option>
-            <option value="❑">❑</option>
-            <option value="⊿">⊿</option>
-            <option value="Mi-Km">Mi-Km</option>
-            <option value="Km-Mi">Km-Mi</option>
-            <option value="Ft-M">Ft-M</option>
-            <option value="M-Ft">M-Ft</option>
-            <option value="Cm-In">Cm-In</option>
-            <option value="In-Cm">In-Cm</option>
-            <option value="F°-C°">F-C</option>
-            <option value="C°-F°">C-F</option>
-            <option value="Kg-Lb">Kg-Lb</option>
-            <option value="Lb-Kg">Lb-Kg</option>
+                <select id="modifier" class="hoverChange">
+                    <option value="+">+</option>
+                    <option value="x">x</option>
+                    <option value="-">-</option>
+                    <option value="/">/</option>
+                    <option value="^">^</option>
+                    <option value="%">%</option>
+                    <option value="√">√</option>
+                    <option value="△">△</option>
+                    <option value="◬">◬</option>
+                    <option value="❑">❑</option>
+                    <option value="⊿">⊿</option>
+                    <option value="Mi-Km">Mi-Km</option>
+                    <option value="Km-Mi">Km-Mi</option>
+                    <option value="Ft-M">Ft-M</option>
+                    <option value="M-Ft">M-Ft</option>
+                    <option value="Cm-In">Cm-In</option>
+                    <option value="In-Cm">In-Cm</option>
+                    <option value="F°-C°">F-C</option>
+                    <option value="C°-F°">C-F</option>
+                    <option value="Kg-Lb">Kg-Lb</option>
+                    <option value="Lb-Kg">Lb-Kg</option>
 
-        </select>
-        
-        <strong id="equals"> = <strong id="result"> </strong></strong>
+                </select>
+                
+                <strong id="equals"> = <strong id="result"> </strong></strong>
 
-        <br>
-        <input type="number" step="any" id="var2" value="1" class="input hoverChange">
-        <br>
-        <div id="var3Place"></div>
+                <br>
+                <input type="number" step="any" id="var2" value="1" class="input hoverChange">
+                <br>
+                <div id="var3Place"></div>
 
-        <div id="button2Place">
+                <div id="button2Place"></div>
+
+                <div id="button1Place">
+                    <button onclick="display()" id="calculate" class="btn hoverChange">Calculate</button>
+                </div>
+            </div>
         </div>
-
-        <div id="button1Place">
-            <button onclick="display()" id="calculate" class="btn hoverChange">Calculate</button>
-        </div>
+        
 
         <script>
             function display2() {

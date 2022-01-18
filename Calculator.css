@@ -1,5 +1,5 @@
 * {
-	background-color: #4CAF50;
+	background-color: #2eaa32;
 	color: #000000;
 }
 
@@ -46,6 +46,11 @@ p#key {
 	border-radius: 3px;
 }
 
+#result {
+	text-align: center;
+	font-size: 35px;
+}
+
 #equals {
 	margin: 0px 0px 0px 220px;
 }
@@ -68,4 +73,12 @@ p#key {
 
 .hoverChange:hover {
 	background-color: #303030;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
 }
