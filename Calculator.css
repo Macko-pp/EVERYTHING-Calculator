@@ -3,6 +3,12 @@
     src: url(https://html-calculator.netlify.app/Rubik_Mono_One/RubikMonoOne-Regular.ttf) format("truetype");
 }
 
+/* add fira code font */
+@font-face {
+	font-family: "Fira Code";
+	src: url(https://html-calculator.netlify.app/FiraCode/FiraCode-Regular.ttf) format("truetype");
+}
+
 * {
 	background-color: #2eaa32;
 	color: #000000;
