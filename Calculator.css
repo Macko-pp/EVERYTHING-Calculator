@@ -1,5 +1,5 @@
 @font-face {
-    font-family: "Rubik Mono One";
+	font-family: "Rubik Mono One";
     src: url(https://html-calculator.netlify.app/Rubik_Mono_One/RubikMonoOne-Regular.ttf) format("truetype");
 }
 
@@ -8,7 +8,7 @@
 	src: url(https://html-calculator.netlify.app/Fira_Code_v6/ttf/FiraCode-Bold.ttf) format("truetype");
 }
 
-* {
+body {
 	background-color: #2eaa32;
 	color: #000000;
 }
@@ -86,9 +86,27 @@ p#key {
 }
 
 .row {
-  display: flex;
+	display: flex;
 }
 
-.column {
-  flex: 50%;
+.column2 {
+	flex: 50%;
+}
+
+@media only screen and (max-width: 600px) {
+	body {
+		background-color: rgb(50, 204, 255);
+	}
+
+	.input {
+	background-color: #000000;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 8px;
+	border: none;
+	cursor: pointer;
+	width: 300px;
+	text-align: center;
+	border-radius: 3px;
+}
 }
