@@ -2,7 +2,7 @@
 
 <html>
     <head>
-        <title>HTML Calculator</title>
+        <title>EVERYTHING Calculator</title>
         <meta charset="UTF-8">
         <meta name="google-site-verification" content="sfQkcm9SJpYt7dXCMiTGmIz_QGnwdIMGF3QfXsnPiGI" />
         <meta name="Calculator.html" content="A calculator I made to test myself in TS, CSS, and HTML">
@@ -16,24 +16,25 @@
     </head>
     
     <body id="body">
-        <div class="row">
-            <div class="column1">
+        
+        <section class="basicGrid">
+            <div class="half">
                 <h1>Calculator</h1>
-                <h3>Made by: Max Konietzko<strong id="smol"> (and Tomas Mendoza)</strong></h3>
-                
-                <strong id="key">Key:</strong>
+                <h3>Made by: Max Konietzko<br> <strong id="smol">(and Tomas Mendoza)</strong> </h3>
+
                 <p id="key">
+                    <strong style="font-weight: bold;">Key:<br></strong>
                     + = Addition<br>
                     x = Multiplication<br>
                     - = Subtraction<br>
-                    ÷ (U+00F7) = Division<br>
+                    ÷ = Division<br>
                     ^ = Exponent<br>
-                    % (U+0025) = Percentage<br>
+                    % = Percentage<br>
                     √ = Sqr Root<br>
-                    △ (U+25B3) = Triangle Area<br>
-                    ◬ (U+25EC) = Triangular Prism Volume<br>
-                    ❑ (U+2751) = Rectangular Prism Volume<br>
-                    ⊿ (U+22BF) = Pythagorean Theorem<br> 
+                    △ = Triangle Area<br>
+                    ◬ = Triangular Prism Volume<br>
+                    ❑ = Rectangular Prism Volume<br>
+                    ⊿ = Pythagorean Theorem<br> 
                     Mi-Km = Miles to Kilometers<br>
                     Km-Mi = Kilometers to Miles<br>
                     Ft-M = Feet to Meters<br>
@@ -47,7 +48,7 @@
                 
                 </p>
             </div>
-            <div class="column2">
+            <div class="half center">
                 <br>
                 <br>
                 <br>
@@ -59,15 +60,15 @@
                 <br>
                 <br>
                 <br>
-                <input type="number" step="any" id="var1" value="1" class="input hoverChange">
+                <input type="number" step="any" id="var1" value="1" class="input hoverChange center">
                 <br>
                 <!-- <input type="text" id="modifier" value="+" class="input"> -->
 
-                <select id="modifier" class="hoverChange">
+                <select id="modifier" class="hoverChange center">
                     <option value="+">+</option>
                     <option value="x">x</option>
                     <option value="-">-</option>
-                    <option value="/">/</option>
+                    <option value="/">÷</option>
                     <option value="^">^</option>
                     <option value="%">%</option>
                     <option value="√">√</option>
@@ -88,20 +89,21 @@
 
                 </select>
                 
-                <strong id="equals"> = <strong id="result"> </strong></strong>
-
+                
                 <br>
-                <input type="number" step="any" id="var2" value="1" class="input hoverChange">
+                <input type="number" step="any" id="var2" value="1" class="input hoverChange center">
                 <br>
-                <div id="var3Place"></div>
-
-                <div id="button2Place"></div>
-
+                <div id="var3Place" class="center"></div>
+                
+                <div id="button2Place" class="center"></div>
+                
                 <div id="button1Place">
-                    <button onclick="display()" id="calculate" class="btn hoverChange">Calculate</button>
+                    <button onclick="display()" id="calculate" class="btn hoverChange center">Calculate</button>
                 </div>
-            </div>
-        </div>
+
+                <p id="equals"> = <strong id="result"> </strong></p>
+        </section>
+        
         
 
         <script>
@@ -150,6 +152,23 @@
                     document.getElementById("button1Place").innerHTML = '<button onclick="display()" id="calculate" class="btn hoverChange">Calculate</button>';
                     document.getElementById("result").innerHTML = calc(var1, modifier, var2);
                 }
+            }
+            
+            const screenWidth = window.screen.width;
+
+            if (screenWidth < 400) {
+                document.getElementById("key").innerHTML = `
+                
+                <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn">Key:</button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="#">+ = Additionome</a>
+                        <a href="#">x = Multiplication</a>
+                        <a href="#">- = Subtraction</a>
+                    </div>
+                </div>
+                
+                `;
             }
         </script>
 
