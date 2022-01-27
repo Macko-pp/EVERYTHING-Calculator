@@ -41,6 +41,11 @@ function calc(var1, modifier, var2, var3) {
 		resultFormat = "√" + var1 + " = " + result;
 	}
 
+	else if (modifier === "³√") {
+		result = Math.cbrt(var1);
+		resultFormat = "³√" + var1 + " = " + result;
+	}
+
 	else if (modifier === "△") {
 		result = (var1 * var2) / 2
 		resultFormat = var1 + " △ " + var2 + " = " + result;
