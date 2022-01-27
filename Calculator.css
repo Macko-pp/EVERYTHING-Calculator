@@ -1,11 +1,11 @@
 @font-face {
 	font-family: "Rubik Mono One";
-    src: url(https://html-calculator.netlify.app/Rubik_Mono_One/RubikMonoOne-Regular.ttf) format("truetype");
+    src: url(https://everything-calculator.netlify.app/Rubik_Mono_One/RubikMonoOne-Regular.ttf) format("truetype");
 }
 
 @font-face {
 	font-family: "Fira Code";
-	src: url(https://html-calculator.netlify.app/Fira_Code_v6/ttf/FiraCode-Bold.ttf) format("truetype");
+	src: url(https://everything-calculator.netlify.app/Fira_Code_v6/ttf/FiraCode-Bold.ttf) format("truetype");
 }
 
 body {
