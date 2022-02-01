@@ -84,6 +84,16 @@ function calc(var1, modifier, var2, var3) {
 		resultFormat = "Hypotenuse of " + var1 + " and " + var2 + " = " + result;
 	}
 
+	else if (modifier === "፳") {
+		function isPrime(num) {
+			for (var i = 2; i < num; i++)
+				if(num % i === 0) return false;
+				return num > 1;
+		}
+
+		(isPrime(var1)) ? result = `${var1} is a prime number` : result = `${var1} is not a prime number`;
+	}
+
 	else if (modifier === "Mi-Km") {
 		result = var1 * 1.609;
 		result = result.toFixed(2);
