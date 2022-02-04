@@ -3,11 +3,6 @@
     src: url(https://everything-calculator.netlify.app/Rubik_Mono_One/RubikMonoOne-Regular.ttf) format("truetype");
 }
 
-@font-face {
-	font-family: "Fira Code";
-	src: url(https://everything-calculator.netlify.app/Fira_Code_v6/ttf/FiraCode-Bold.ttf) format("truetype");
-}
-
 body {
 	background-color: #2eaa32;
 	color: #000000;
@@ -17,6 +12,7 @@ body {
 
 strong#key {
 	color: #000000;
+	font-family: "Fira Code", monospace;
 }
 
 .dropbtn {
