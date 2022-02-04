@@ -1,8 +1,3 @@
-@font-face {
-	font-family: "Rubik Mono One";
-    src: url(https://everything-calculator.netlify.app/Rubik_Mono_One/RubikMonoOne-Regular.ttf) format("truetype");
-}
-
 body {
 	background-color: #2eaa32;
 	color: #000000;
