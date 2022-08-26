@@ -1,50 +1,44 @@
 <!DOCTYPE html>
-
 <html>
-    <head>
-        <title>EVERYTHING Calculator</title>
-        <meta charset="UTF-8">
-        <meta name="google-site-verification" content="5niw6AI_VgQEAKg6KVwCHAtcaB1DDCMyC8XkjQOxYsg" />
-        <meta name="google-site-verification" content="ne6ZoZCFuwzCITo6gzwey1Y3hs-ynDgXUcRh27URf2A" />
-        <!-- Tags for that sweet algorithm manipulation -->
-        <meta name="description" content="A calculator I made to test myself in TS, CSS, and HTML">
-        <meta name="author" content="Max Konietzko">
-        <meta name="viewport" content="width=device-width initial-scale=1">
-        <meta name="keywords" content="website, calculator, foo, bar, everything, max konietzko">
+	<head>
+		<title>EVERYTHING Calculator</title>
+		<meta charset="UTF-8">
+		<meta name="google-site-verification" content="5niw6AI_VgQEAKg6KVwCHAtcaB1DDCMyC8XkjQOxYsg" />
+		<meta name="google-site-verification" content="ne6ZoZCFuwzCITo6gzwey1Y3hs-ynDgXUcRh27URf2A" />
 
-        <!-- Import Bumla -->
-        <link rel="stylesheet" href="../bulma.min.css">
-        <!-- Import jQuery -->
-        <script src="../jquery-3.6.0.min.js"></script>
-        <!-- favicon link -->
-        <link rel=“shortcut icon” href="/favicon.ico" type=“image/x-icon”>
-        <link rel=“icon” href="/favicon.ico" type=“image/x-icon”>
-        <!-- Fira code font link -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&display=swap" rel="stylesheet">
-        <!-- Rubik Mono One font link -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet"> 
+		<!-- Import Bumla -->
+		<link rel="stylesheet" href="./bulma.min.css">
+		<!-- Import jQuery -->
+		<script src="./jquery-3.6.0.min.js"></script>
+		<!-- favicon link -->
+		<link rel=“shortcut icon” href="./favicon.ico" type=“image/x-icon”>
+		<link rel=“icon” href="./favicon.ico" type=“image/x-icon”>
+		<!-- Fira code font link -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&display=swap" rel="stylesheet">
+		<!-- Rubik Mono One font link -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet"> 
 
-        <!-- Script link -->
-        <script src="index.ts"></script>
-        <!-- Stylesheet link -->
-        <link rel="stylesheet" type="text/css" href="styles.css">
-    </head>
-    
-    <body id="body">
-        <nav class="navbar" role="navigation" aria-label="main navigation">
+		<!-- Script link -->
+		<script src="./index.js" defer></script>
+		<!-- Stylesheet link -->
+		<link rel="stylesheet" type="text/css" href="./styles.css">
+	</head>
+	
+	<body id="body">
+		<nav class="navbar" role="navigation" aria-label="main navigation">
 			<div class="navbar-brand">
-				<a class="navbar-item" href="../index.html">
+				<a class="navbar-item" href="https://macko-pp.github.io/website-pp">
 					<h1 class="title is-4">++</h1>
 				</a>
 			</div>
 
 			<div class="navbar-menu">
 				<div class="navbar-end">
-					<a class="navbar-item" href="../index.html">
+					<a class="navbar-item" href="https://macko-pp.github.io/website-pp">
 						Home
 					</a>
 			
@@ -58,10 +52,10 @@
 						</a>
 			
 						<div class="navbar-dropdown">
-							<a class="navbar-item" href="../HTMLCalculator/index.html">
+							<a class="navbar-item" href="./index.html">
 								EVERYTING Calculator
 							</a>
-							<a class="navbar-item" href="../AssignmentManager/index.html">
+							<a class="navbar-item" href="https://macko-pp.github.io/AssignmentManager">
 								Assignment Manager
 							</a>
 							<a class="navbar-item" href="https://github.com/Tomasmenvel/Maid-chan">
@@ -74,7 +68,7 @@
 								Event Calendar
 							</a>
 							<hr class="navbar-divider">
-							<a class="navbar-item" href="mailto:max.konietzko.maya@gmail.com">
+							<a class="navbar-item" href="mailto:mackomaxo@duck.com">
 								Report an issue
 							</a>
 						</div>
@@ -94,176 +88,137 @@
 			</div>
 		</nav>
 
-        <section class="basicGrid">
-            <div class="half">
-                <h1>
-                    Everything
-                    Calculator
-                </h1>
-                <p>Made by: Max Konietzko</p>
+		<section class="columns">
+			<div class="column">
+				<h1 class="title is-1">
+					Everything
+					Calculator
+				</h1>
+				<p class="subtitle">Made by: Max Konietzko</p>
 
-                <p id="key">
-                    <strong id="keyTitle">Key:<br></strong>
-                    + = Addition<br>
-                    x = Multiplication<br>
-                    - = Subtraction<br>
-                    ÷ = Division<br>
-                    ^ = Exponent<br>
-                    % = Percentage<br>
-                    √ = Sqr Root<br>
-                    ³√ = Cube Root<br>
-                    △ = Triangle Area<br>
-                    ◬ = Triangular Prism Volume<br>
-                    ❑ = Rectangular Prism Volume<br>
-                    ⊿ = Pythagorean Theorem<br> 
-                    ፳ = Prime Number Check<br>
-                    Mi-Km = Miles to Kilometers<br>
-                    Km-Mi = Kilometers to Miles<br>
-                    Ft-M = Feet to Meters<br>
-                    M-Ft = Meters to Feet<br>
-                    Cm-In = Centimeters to Inches<br>
-                    In-Cm = Inches to Centimeters<br>
-                    °F-°C = Farenheit to Celsius<br>
-                    °C-°F = Celsius to Farenheit<br>
-                    Kg-Lb = Kilograms to Pounds<br>
-                    Lb-Kg = Pounds to Kilograms<br>
-                
-                </p>
-            </div>
-            <div class="half center">
-                
-                <input type="number" step="any" id="var1" value="1" class="input hoverChange center">
-                <br>
-                <!-- <input type="text" id="modifier" value="+" class="input"> -->
+				<p id="key">
+					<strong id="keyTitle">Key:<br></strong>
+					+ = Addition<br>
+					x = Multiplication<br>
+					- = Subtraction<br>
+					÷ = Division<br>
+					^ = Exponent<br>
+					% = Percentage<br>
+					√ = Sqr Root<br>
+					³√ = Cube Root<br>
+					△ = Triangle Area<br>
+					◬ = Triangular Prism Volume<br>
+					❑ = Rectangular Prism Volume<br>
+					⊿ = Pythagorean Theorem<br> 
+					፳ = Prime Number Check<br>
+					Mi-Km = Miles to Kilometers<br>
+					Km-Mi = Kilometers to Miles<br>
+					Ft-M = Feet to Meters<br>
+					M-Ft = Meters to Feet<br>
+					Cm-In = Centimeters to Inches<br>
+					In-Cm = Inches to Centimeters<br>
+					°F-°C = Farenheit to Celsius<br>
+					°C-°F = Celsius to Farenheit<br>
+					Kg-Lb = Kilograms to Pounds<br>
+					Lb-Kg = Pounds to Kilograms<br>
+				
+				</p>
+			</div>
+			<div class="column center">
+				
+				<input type="number" step="any" id="var1" value="1" class="input hoverChange center">
+				<br>
 
-                <select id="modifier" class="hoverChange center">
-                    <option value="+">+</option>
-                    <option value="x">x</option>
-                    <option value="-">-</option>
-                    <option value="/">÷</option>
-                    <option value="^">^</option>
-                    <option value="%">%</option>
-                    <option value="√">√</option>
-                    <option value="³√">³√</option>
-                    <option value="△">△</option>
-                    <option value="◬">◬</option>
-                    <option value="❑">❑</option>
-                    <option value="⊿">⊿</option>
-                    <option value="፳">፳</option>
-                    <option value="Mi-Km">Mi-Km</option>
-                    <option value="Km-Mi">Km-Mi</option>
-                    <option value="Ft-M">Ft-M</option>
-                    <option value="M-Ft">M-Ft</option>
-                    <option value="Cm-In">Cm-In</option>
-                    <option value="In-Cm">In-Cm</option>
-                    <option value="F-C">F°-C°</option>
-                    <option value="C-F">C°-F°</option>
-                    <option value="Kg-Lb">Kg-Lb</option>
-                    <option value="Lb-Kg">Lb-Kg</option>
+				<select id="modifier" class="hoverChange center">
+					<option value="+">+</option>
+					<option value="x">x</option>
+					<option value="-">-</option>
+					<option value="/">÷</option>
+					<option value="^">^</option>
+					<option value="%">%</option>
+					<option value="√">√</option>
+					<option value="³√">³√</option>
+					<option value="△">△</option>
+					<option value="◬">◬</option>
+					<option value="❑">❑</option>
+					<option value="⊿">⊿</option>
+					<option value="፳">፳</option>
+					<option value="Mi-Km">Mi-Km</option>
+					<option value="Km-Mi">Km-Mi</option>
+					<option value="Ft-M">Ft-M</option>
+					<option value="M-Ft">M-Ft</option>
+					<option value="Cm-In">Cm-In</option>
+					<option value="In-Cm">In-Cm</option>
+					<option value="F-C">F°-C°</option>
+					<option value="C-F">C°-F°</option>
+					<option value="Kg-Lb">Kg-Lb</option>
+					<option value="Lb-Kg">Lb-Kg</option>
+				</select>
+				
+				
+				<br>
+				<input type="number" step="any" id="var2" value="1" class="input hoverChange center">
+				<br>
+				<div id="var3Place" class="center"></div>
+				
+				<div id="button2Place" class="center"></div>
+				
+				<div id="button1Place">
+					<button onclick="display()" id="calculate" class="btn hoverChange center">Calculate</button>
+				</div>
 
-                </select>
-                
-                
-                <br>
-                <input type="number" step="any" id="var2" value="1" class="input hoverChange center">
-                <br>
-                <div id="var3Place" class="center"></div>
-                
-                <div id="button2Place" class="center"></div>
-                
-                <div id="button1Place">
-                    <button onclick="display()" id="calculate" class="btn hoverChange center">Calculate</button>
-                </div>
+				<p id="equals"> = <strong id="result"> </strong></p>
+			</div>
+		</section>
+		
+		<script>
+			function display2() {
+				var var1 = document.getElementById("var1").value;
+				var modifier = document.getElementById("modifier").value;
+				var var2 = document.getElementById("var2").value;
+				var var3 = document.getElementById("var3").value;
+				document.getElementById("var3Place").innerHTML = "";
+				document.getElementById("button2Place").innerHTML = "";
+				document.getElementById("button1Place").innerHTML = '<button onclick="display()" id="calculate" class="btn hoverChange">Calculate</button>';
+				document.getElementById("result").innerHTML = calc(var1, modifier, var2, var3);
+			}
 
-                <p id="equals"> = <strong id="result"> </strong></p>
-        </section>
-        
-        
+			function display() {
+				var var1 = document.getElementById("var1").value;
+				var modifier = document.getElementById("modifier").value;
+				var var2 = document.getElementById("var2").value;
+				
+				// if either var is a decimal, convert it to a float. Else, convert it to an int.
+				if (var1.includes(".")) {
+					var1 = parseFloat(var1);
+				} else {
+					var1 = parseInt(var1);
+				}
+				
+				if (var2.includes(".")) {
+					var2 = parseFloat(var2);
+				} else {
+					var2 = parseInt(var2);
+				}
+				
 
-        <script>
-            function display2() {
-                var var1 = document.getElementById("var1").value;
-                var modifier = document.getElementById("modifier").value;
-                var var2 = document.getElementById("var2").value;
-                var var3 = document.getElementById("var3").value;
-                document.getElementById("var3Place").innerHTML = "";
-                document.getElementById("button2Place").innerHTML = "";
-                document.getElementById("button1Place").innerHTML = '<button onclick="display()" id="calculate" class="btn hoverChange">Calculate</button>';
-                document.getElementById("result").innerHTML = calc(var1, modifier, var2, var3);
-            }
+				if (modifier === "◬" || modifier === "❑") {
+					// replace id var3Place with the input for the third variable
+					document.getElementById("var3Place").innerHTML = "<input type='number' step='any' id='var3' value='0' class='input hoverChange'>";
 
-            function display() {
-                var var1 = document.getElementById("var1").value;
-                var modifier = document.getElementById("modifier").value;
-                var var2 = document.getElementById("var2").value;
-                
-                // if either var is a decimal, convert it to a float. Else, convert it to an int.
-                if (var1.includes(".")) {
-                    var1 = parseFloat(var1);
-                } else {
-                    var1 = parseInt(var1);
-                }
-                
-                if (var2.includes(".")) {
-                    var2 = parseFloat(var2);
-                } else {
-                    var2 = parseInt(var2);
-                }
-                
+					document.getElementById("button2Place").innerHTML = '<button onclick="display2()" id="calculate2" class="btn hoverChange">Calculate Volume</button>';
 
-                if (modifier === "◬" || modifier === "❑") {
-                    // replace id var3Place with the input for the third variable
-                    document.getElementById("var3Place").innerHTML = "<input type='number' step='any' id='var3' value='0' class='input hoverChange'>";
+					document.getElementById("button1Place").innerHTML = ''
 
-                    document.getElementById("button2Place").innerHTML = '<button onclick="display2()" id="calculate2" class="btn hoverChange">Calculate Volume</button>';
+				} else {
+					// replace id var3Place with nothing
+					document.getElementById("var3Place").innerHTML = "";
+					document.getElementById("button2Place").innerHTML = "";
+					document.getElementById("button1Place").innerHTML = '<button onclick="display()" id="calculate" class="btn hoverChange">Calculate</button>';
+					document.getElementById("result").innerHTML = calc(var1, modifier, var2);
+				}
+			}
+		</script>
 
-                    document.getElementById("button1Place").innerHTML = ''
-
-                } else {
-                    // replace id var3Place with nothing
-                    document.getElementById("var3Place").innerHTML = "";
-                    document.getElementById("button2Place").innerHTML = "";
-                    document.getElementById("button1Place").innerHTML = '<button onclick="display()" id="calculate" class="btn hoverChange">Calculate</button>';
-                    document.getElementById("result").innerHTML = calc(var1, modifier, var2);
-                }
-            }
-            
-            const screenWidth = window.screen.width;
-
-            if (screenWidth < 400) {
-                document.getElementById("key").innerHTML = `
-                
-                <div class="dropdown">
-                    <button onclick="myFunction()" class="dropbtn">Key:</button>
-                    <div id="myDropdown" class="dropdown-content">
-                        <a href="#">+ = Addition</a>
-                        <a href="#">x = Multiplication</a>
-                        <a href="#">- = Subtraction</a>
-                        <a href="#">÷ = Division</a>
-                        <a href="#">^ = Exponent</a>
-                        <a href="#">% = Percentage</a>
-                        <a href="#">√ = Square Root</a>
-                        <a href="#">³√ = Cube Root</a>
-                        <a href="#">△ = Triangle Area</a>
-                        <a href="#">◬ = Triangle Volume</a>
-                        <a href="#">❑ = Cube Volume</a>
-                        <a href="#">⊿ = Pythagorean Theorem</a>
-                        <a href="#">Mi-Km = Miles to Kilometers</a>
-                        <a href="#">Km-Mi = Kilometers to Miles</a>
-                        <a href="#">Ft-M = Feet to Meters</a>
-                        <a href="#">M-Ft = Meters to Feet</a>
-                        <a href="#">Cm-In = Centimeters to Inches</a>
-                        <a href="#">In-Cm = Inches to Centimeters</a>
-                        <a href="#">°F-°C = Fahrenheit to Celsius</a>
-                        <a href="#">°C-°F = Celsius to Fahrenheit</a>
-                        <a href="#">Kg-Lb = Kilograms to Pounds</a>
-                        <a href="#">Lb-Kg = Pounds to Kilograms</a>
-                    </div>
-                </div>
-                
-                `;
-            }
-        </script>
-
-    </body>
+	</body>
 </html>

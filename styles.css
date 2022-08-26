@@ -1,9 +1,22 @@
-.basicGrid {
+body {
+	background-color: #2eaa32;
+}
+
+body::after {
+	background-color: #2eaa32;
+}
+
+.columns {
+	padding: 30px;
 	background-color: #2eaa32;
 	color: #000000;
 	font-family: "Rubik Mono One";
     font-size: 20px;
 	overflow: hidden;
+}
+
+.title, .subtitle{
+	color: black;
 }
 
 #key {
@@ -16,41 +29,41 @@
 }
 
 .dropbtn {
-  background-color: black;
-  color: white;
-  font-size: 20;
-  padding: 6px;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
+	background-color: black;
+	color: white;
+	font-size: 20;
+	padding: 6px;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
 }
 
 .dropbtn:hover, .dropbtn:focus {
-  background-color: #303030;
+  	background-color: #303030;
 }
 
 .dropdown {
-  position: relative;
-  /* display: inline-block; */
+  	position: relative;
+  	/* display: inline-block; */
 }
 
 .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #000000;
-  min-width: 160px;
-  overflow: auto;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  font-size: 20px;
+	display: none;
+	position: absolute;
+	background-color: #000000;
+	min-width: 160px;
+	overflow: auto;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+	font-size: 20px;
 }
 
 .dropdown-content a {
-  color: white;
-  font-size: 15px;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
+	color: white;
+	font-size: 15px;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
 }
 
 .dropdown a:hover {background-color: #303030;}
@@ -92,6 +105,7 @@
 }
 
 #result {
+	color: black;
 	text-align: left;
 	font-size: 35px;
 }
@@ -112,11 +126,11 @@
 	background-color: #303030;
 }
 
-.basicGrid {
+/* .columns {
 	display: grid;
 	gap: 1rem;
 	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-}
+} */
 
 .center {
 	display: flex;
@@ -126,21 +140,21 @@
 }
 
 @media only screen and (max-width: 600px) {
-	body {
+	.columns {
 		background-color: rgb(50, 204, 255);
 		overflow: scroll;
 	}
 
 	.input {
-	background-color: #000000;
-	color: white;
-	padding: 14px 20px;
-	margin: 8px 8px;
-	border: none;
-	cursor: pointer;
-	width: 300px;
-	text-align: center;
-	border-radius: 3px;
+		background-color: #000000;
+		color: white;
+		padding: 14px 20px;
+		margin: 8px 8px;
+		border: none;
+		cursor: pointer;
+		width: 300px;
+		text-align: center;
+		border-radius: 3px;
 	}
 /* 
 	#modifier {
